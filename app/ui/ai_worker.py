@@ -1,4 +1,4 @@
-"""AI 流式 Worker：在 QThread 中跑 async ai.stream_chat，逐段刷新 UI。
+"""AI 流式 Worker：在 QThread 中跑 ai.stream_chat（同步生成器），逐段刷新 UI。
 
 用法：
     worker = AIWorker(system, [messages], max_tokens=...)
@@ -9,17 +9,15 @@
 """
 from __future__ import annotations
 
-import asyncio
-
 from PySide6.QtCore import QThread, Signal
 
 from ..services import ai
 
 
 class AIWorker(QThread):
-    delta = Signal(str)       # 文本增量
-    completed = Signal()      # 流式正常结束（重命名避免覆盖 QThread.finished）
-    failed = Signal(str)      # 错误信息（含未配置 AI 的友好提示）
+    delta = Signal(str)      # 文本增量
+    completed = Signal()     # 流式正常结束（重命名避免覆盖 QThread.finished）
+    failed = Signal(str)     # 错误信息（含未配置 AI 的友好提示）
 
     def __init__(self, system: str, messages: list[dict],
                  max_tokens: int | None = None, parent=None):
@@ -30,11 +28,9 @@ class AIWorker(QThread):
 
     def run(self):
         try:
-            async def _stream():
-                async for chunk in ai.stream_chat(
-                        self._messages, system=self._system, max_tokens=self._max_tokens):
-                    self.delta.emit(chunk)
-            asyncio.run(_stream())
+            for chunk in ai.stream_chat(
+                    self._messages, system=self._system, max_tokens=self._max_tokens):
+                self.delta.emit(chunk)
             self.completed.emit()
         except ai.AINotConfigured:
             self.failed.emit(ai.ai_error_message())
