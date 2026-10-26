@@ -4,10 +4,10 @@ from __future__ import annotations
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QHBoxLayout, QLabel, QPushButton, QTextBrowser, QVBoxLayout, QWidget
 
-from ..ai_worker import AIWorker
-from ..widgets import BirthForm, SectionTitle, make_result_browser, stream_plain
-from ...services import bazi as bz
-from ...services import lunisolar as L
+from ui.ai_worker import AIWorker
+from ui.widgets import BirthForm, SectionTitle, make_result_browser, stream_plain
+from services import bazi as bz
+from services import lunisolar as L
 
 LUCK_MAP = {"大吉": "great", "中吉": "great", "吉": "great",
             "小吉": "mid", "平": "mid", "小凶": "bad", "中凶": "bad", "凶": "bad"}

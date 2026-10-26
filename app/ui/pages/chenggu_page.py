@@ -3,8 +3,8 @@ from __future__ import annotations
 
 from PySide6.QtWidgets import QHBoxLayout, QLabel, QPushButton, QVBoxLayout, QWidget
 
-from ..widgets import BirthForm, SectionTitle, make_luck_label, make_result_browser
-from ...services import chenggu as cg
+from ui.widgets import BirthForm, SectionTitle, make_luck_label, make_result_browser
+from services import chenggu as cg
 
 
 class ChengguPage(QWidget):

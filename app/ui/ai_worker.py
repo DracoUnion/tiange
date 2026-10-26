@@ -11,7 +11,7 @@ from __future__ import annotations
 
 from PySide6.QtCore import QThread, Signal
 
-from ..services import ai
+from services import ai
 
 
 class AIWorker(QThread):

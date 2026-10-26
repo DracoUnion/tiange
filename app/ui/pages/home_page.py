@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from PySide6.QtWidgets import QGridLayout, QVBoxLayout, QWidget
 
-from ..widgets import SectionTitle, ToolCard
+from ui.widgets import SectionTitle, ToolCard
 
 COLS = 4
 

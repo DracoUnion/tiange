@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from PySide6.QtWidgets import QLabel, QVBoxLayout, QWidget
 
-from ..widgets import Card, SectionTitle
+from ui.widgets import Card, SectionTitle
 
 
 class AboutPage(QWidget):

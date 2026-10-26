@@ -9,7 +9,7 @@ import pytest  # noqa: E402
 
 from PySide6.QtWidgets import QApplication  # noqa: E402
 
-from app.ui.main_window import MainWindow, NAV  # noqa: E402
+from ui.main_window import MainWindow, NAV  # noqa: E402
 
 _app: QApplication | None = None
 
@@ -59,13 +59,13 @@ def test_home_card_modes(qapp):
 
 def test_pages_compute(qapp):
     """触发各页核心计算，验证不抛异常。"""
-    from app.ui.pages.bazi_page import BaziPage
-    from app.ui.pages.chenggu_page import ChengguPage
-    from app.ui.pages.fortune_page import FortunePage
-    from app.ui.pages.hepan_page import HepanPage
-    from app.ui.pages.name_page import NamePage
-    from app.ui.pages.paipan_page import PaipanPage
-    from app.ui.pages.qian_page import QianPage
+    from ui.pages.bazi_page import BaziPage
+    from ui.pages.chenggu_page import ChengguPage
+    from ui.pages.fortune_page import FortunePage
+    from ui.pages.hepan_page import HepanPage
+    from ui.pages.name_page import NamePage
+    from ui.pages.paipan_page import PaipanPage
+    from ui.pages.qian_page import QianPage
 
     p = BaziPage(); p._run(); assert p.result.toPlainText()
     c = ChengguPage(); c._run(); assert c.result.toPlainText()

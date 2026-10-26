@@ -9,7 +9,7 @@ from typing import Iterator
 
 import openai
 
-from ..core.config import settings
+from core.config import settings
 from .openai_client import OpenAIClient
 
 

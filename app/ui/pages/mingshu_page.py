@@ -3,9 +3,9 @@ from __future__ import annotations
 
 from PySide6.QtWidgets import QComboBox, QHBoxLayout, QLabel, QPushButton, QVBoxLayout, QWidget
 
-from ..ai_worker import AIWorker
-from ..widgets import BirthForm, SectionTitle, make_result_browser, stream_plain
-from ...services import ai, bazi as bz, lunisolar as L
+from ui.ai_worker import AIWorker
+from ui.widgets import BirthForm, SectionTitle, make_result_browser, stream_plain
+from services import ai, bazi as bz, lunisolar as L
 
 TYPES = [
     ("bazi", "八字命书", "基于八字命盘，撰写一生传记"),

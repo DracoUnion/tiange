@@ -13,7 +13,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from ..services import lunisolar as L
+from services import lunisolar as L
 
 MIN_YEAR = 1900
 MAX_YEAR = 2100

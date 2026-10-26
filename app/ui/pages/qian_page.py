@@ -5,9 +5,9 @@ import json
 
 from PySide6.QtWidgets import QComboBox, QHBoxLayout, QLabel, QLineEdit, QPushButton, QVBoxLayout, QWidget
 
-from ..ai_worker import AIWorker
-from ..widgets import Card, SectionTitle, make_result_browser, stream_plain
-from ...services import qian as qsv
+from ui.ai_worker import AIWorker
+from ui.widgets import Card, SectionTitle, make_result_browser, stream_plain
+from services import qian as qsv
 
 TYPES = [
     ("64gua", "周易占卜"),

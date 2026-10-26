@@ -3,9 +3,9 @@ from __future__ import annotations
 
 import pytest
 
-from app.core.config import settings
-from app.services import ai
-from app.services.openai_client import OpenAIClient
+from core.config import settings
+from services import ai
+from services.openai_client import OpenAIClient
 
 
 def test_client_builds():

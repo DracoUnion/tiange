@@ -5,9 +5,9 @@ import datetime as dt
 
 from PySide6.QtWidgets import QComboBox, QHBoxLayout, QLabel, QLineEdit, QPushButton, QVBoxLayout, QWidget
 
-from ..widgets import BirthForm, SectionTitle, make_result_browser
-from ...services import divination as dv
-from ...services import qian as qsv
+from ui.widgets import BirthForm, SectionTitle, make_result_browser
+from services import divination as dv
+from services import qian as qsv
 
 METHODS = [
     ("liuyao", "六爻占卜"),

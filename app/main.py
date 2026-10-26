@@ -9,8 +9,8 @@ import sys
 
 from PySide6.QtWidgets import QApplication
 
-from app.ui.main_window import MainWindow
-from app.ui.theme import QSS
+from ui.main_window import MainWindow
+from ui.theme import QSS
 
 
 def main() -> int:

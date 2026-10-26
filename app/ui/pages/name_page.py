@@ -5,9 +5,9 @@ import random
 
 from PySide6.QtWidgets import QComboBox, QHBoxLayout, QLabel, QLineEdit, QPushButton, QVBoxLayout, QWidget
 
-from ..ai_worker import AIWorker
-from ..widgets import Card, SectionTitle, make_result_browser, stream_plain
-from ...services import ai
+from ui.ai_worker import AIWorker
+from ui.widgets import Card, SectionTitle, make_result_browser, stream_plain
+from services import ai
 
 _MID_M = "一二三四五六七八九十子安之若依云舒朗逸永嘉真如清和明德"
 _MID_F = "静婉淑雅兰芳欣悦慧琳雪晴语颖梦蝶安然"

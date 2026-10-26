@@ -5,10 +5,10 @@ import datetime as dt
 
 from PySide6.QtWidgets import QComboBox, QHBoxLayout, QLabel, QPushButton, QVBoxLayout, QWidget
 
-from ..widgets import BirthForm, SectionTitle, make_luck_label, make_result_browser
-from ...services import bazi as bz
-from ...services import fortune as fsv
-from ...services import lunisolar as L
+from ui.widgets import BirthForm, SectionTitle, make_luck_label, make_result_browser
+from services import bazi as bz
+from services import fortune as fsv
+from services import lunisolar as L
 
 KINDS = [
     ("today", "今日运势"),

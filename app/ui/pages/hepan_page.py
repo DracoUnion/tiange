@@ -5,8 +5,8 @@ import random
 
 from PySide6.QtWidgets import QComboBox, QHBoxLayout, QLabel, QPushButton, QVBoxLayout, QWidget
 
-from ..widgets import BirthForm, SectionTitle, make_result_browser
-from ...services import bazi as bz, lunisolar as L
+from ui.widgets import BirthForm, SectionTitle, make_result_browser
+from services import bazi as bz, lunisolar as L
 
 TYPES = [
     ("marriage", "婚姻合盘"),

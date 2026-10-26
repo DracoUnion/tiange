@@ -3,8 +3,8 @@ from __future__ import annotations
 
 from PySide6.QtWidgets import QHBoxLayout, QLineEdit, QPushButton, QTextBrowser, QVBoxLayout, QWidget
 
-from ..ai_worker import AIWorker
-from ..widgets import SectionTitle
+from ui.ai_worker import AIWorker
+from ui.widgets import SectionTitle
 
 _SYSTEM = ("你是天格的「天格道长」，一位通达《道德经》与道家智慧的智者。"
            "用温和、沉稳、富有哲理又不失落地的语气，与用户交流人生、情绪与选择。"

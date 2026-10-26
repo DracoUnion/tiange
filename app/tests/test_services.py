@@ -1,12 +1,12 @@
 """算法服务测试（移植自后端 test_api.py 的纯算法断言，无 HTTP）。"""
 from __future__ import annotations
 
-from app.services import bazi as bz
-from app.services import chenggu as cg
-from app.services import divination as dv
-from app.services import fortune as fsv
-from app.services import lunisolar as L
-from app.services import qian as qsv
+from services import bazi as bz
+from services import chenggu as cg
+from services import divination as dv
+from services import fortune as fsv
+from services import lunisolar as L
+from services import qian as qsv
 
 
 def _spec(calendar="solar", year=1990, month=5, day=15, hour=12, gender="male"):
