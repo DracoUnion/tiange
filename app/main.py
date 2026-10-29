@@ -9,15 +9,17 @@ import sys
 
 from PySide6.QtWidgets import QApplication
 
+from bootstrap import build_context
 from ui.main_window import MainWindow
 from ui.theme import QSS
 
 
 def main() -> int:
+    ctx = build_context()
     app = QApplication(sys.argv)
     app.setApplicationName("天格")
     app.setStyleSheet(QSS)
-    win = MainWindow()
+    win = MainWindow(ctx=ctx)
     win.show()
     return app.exec()
 

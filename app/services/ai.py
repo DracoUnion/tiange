@@ -1,4 +1,4 @@
-"""AI 服务门面：所有 LLM 调用统一走 OpenAIClient（见 services/openai_client.py）。
+"""AI 服务门面：所有 LLM 调用统一走 OpenAIClient（见 clients/openai_client.py）。
 
 配置项（env）：OPENAI_API_KEY / OPENAI_BASE_URL / OPENAI_MODEL。
 未配置 key 时，AI 类接口返回友好错误（不做 mock）。
@@ -10,7 +10,7 @@ from typing import Iterator
 import openai
 
 from core.config import settings
-from .openai_client import OpenAIClient
+from clients.openai_client import OpenAIClient
 
 
 class AINotConfigured(Exception):

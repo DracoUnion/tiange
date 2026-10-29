@@ -5,7 +5,7 @@ import pytest
 
 from core.config import settings
 from services import ai
-from services.openai_client import OpenAIClient
+from clients.openai_client import OpenAIClient
 
 
 def test_client_builds():

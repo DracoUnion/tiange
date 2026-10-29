@@ -1,1 +1,5 @@
-"""命理算法与 AI 服务。"""
+"""服务层（零 Qt）。"""
+
+from services.facade import ServiceFacade
+
+__all__ = ["ServiceFacade"]

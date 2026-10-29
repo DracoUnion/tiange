@@ -43,8 +43,9 @@ NAV = [
 
 
 class MainWindow(QMainWindow):
-    def __init__(self, parent=None):
+    def __init__(self, ctx=None, parent=None):
         super().__init__(parent)
+        self.ctx = ctx
         self.setWindowTitle("天格 · 命理平台")
         self.resize(1160, 800)
         self._pages: dict[str, QWidget] = {}
